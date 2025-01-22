@@ -4,136 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elegant Website</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #444;
-            line-height: 1.6;
-        }
-
-        header, footer {
-            width: 100%;
-            background: linear-gradient(90deg, #f14a4a, #2196f3);
-            color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        nav {
-            display: flex;
-            justify-content: right;
-            background: white;
-            padding: 15px 10px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: #444;
-            font-weight: bold;
-            font-size: 1rem;
-            position: relative;
-        }
-
-        nav a:visited {
-            color: #444; /* Prevent color change after visiting */
-        }
-
-        nav a::after {
-            content: '';
-            display: block;
-            height: 2px;
-            width: 0;
-            background: #4caf50;
-            transition: width 0.3s;
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        footer {
-            background: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 10px 20px;
-        }
-
-        section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        section h2 {
-            font-size: 2rem;
-            color: #4caf50;
-            margin-bottom: 10px;
-        }
-
-        .dropdown {
-            margin: 20px 0;
-        }
-
-        .dropdown button {
-            background: #4caf50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1rem;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        .dropdown button:focus {
-            outline: none;
-        }
-
-        .dropdown-content {
-            max-height: 0;
-            overflow: hidden;
-            margin-top: 10px;
-            border: 1px solid #ddd;
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            transition: max-height 0.4s ease-out;
-        }
-
-        .dropdown-content a {
-            display: block;
-            padding: 10px 20px;
-            text-decoration: none;
-            color: black; /* Default link color */
-            border-bottom: 1px solid #ddd;
-        }
-
-        .dropdown-content a:visited {
-            color: red; /* Color after the link is visited */
-        }
-
-        .dropdown-content a:hover {
-            background: #f1f1f1;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 450px) {
-            section {
-                padding: 20px 10px;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -149,56 +21,103 @@
         <a href="#contact">Contact</a>
     </nav>
     <section>
-        <h2>Subjects</h2>
+        <h2 style="text-align: center;">Subjects</h2>
 
         <!-- Math Section -->
         <div class="dropdown">
-            <button onclick="toggleDropdown('math-dropdown')">Math</button>
+            <button onclick="toggleDropdown('math-dropdown')" style="width: 100px;">Math</button>
             <div id="math-dropdown" class="dropdown-content">
-                <a href="mathsch1.html" target="_blank">1. Real Numbers</a>
-                <a href="mathsch2.html" target="_blank">2. Polynomials</a>
-                <a href="mathsch3.html" target="_blank">3. Pair of Linear Equations in Two Variables</a>
-                <a href="mathsch4.html" target="_blank">4. Quadratic Equations</a>
-                <a href="mathsch5.html" target="_blank">5. Arithmetic Progressions</a>
-                <a href="mathsch6.html" target="_blank">6. Triangles</a>
-                <a href="mathsch7.html" target="_blank">7. Coordinate Geometry</a>
-                <a href="mathsch8.html" target="_blank">8. Introduction to Trigonometry</a>
-                <a href="mathsch9.html" target="_blank">9. Applications of Trigonometry</a>
-                <a href="mathsch10.html" target="_blank">10. Circles</a>
-                <a href="mathsch11.html" target="_blank">11. Constructions</a>
-                <a href="mathsch12.html" target="_blank">12. Areas Related to Circles</a>
-                <a href="mathsch13.html" target="_blank">13. Surface Areas and Volumes</a>
-                <a href="mathsch14.html" target="_blank">14. Statistics</a>
-                <a href="mathsch15.html" target="_blank">15. Probability</a>
+                <a href="https://mynotesassamclass10.netlify.app/mathsch1" target="_blank">1. Real Numbers</a>
+                <a href="https://mynotesassamclass10.netlify.app/mathsch2" target="_blank">2. Polynomials</a>
+                <a href="https://mynotesassamclass10.netlify.app/mathsch3" target="_blank">3. Pair of Linear Equations in Two Variables</a>
+                <a href="https://mynotesassamclass10.netlify.app/mathsch4" target="_blank">4. Quadratic Equations</a>
+                <a href="https://mynotesassamclass10.netlify.app/mathsch5" target="_blank">5. Arithmetic Progressions</a>
+                <a href="https://mynotesassamclass10.netlify.app/mathsch6" target="_blank">6. Triangles</a>
+                <a href="https://mynotesassamclass10.netlify.app/mathsch7" target="_blank">7. Coordinate Geometry</a>
+                <a href="https://mynotesassamclass10.netlify.app/mathsch8" target="_blank">8. Introduction to Trigonometry</a>
+                <a href="https://mynotesassamclass10.netlify.app/mathsch9" target="_blank">9. Applications of Trigonometry</a>
+                <a href="https://mynotesassamclass10.netlify.app/mathsch10" target="_blank">10. Circles</a>
+                <a href="https://mynotesassamclass10.netlify.app/mathsch11" target="_blank">11. Constructions</a>
+                <a href="https://mynotesassamclass10.netlify.app/mathsch12" target="_blank">12. Areas Related to Circles</a>
+                <a href="https://mynotesassamclass10.netlify.app/mathsch13" target="_blank">13. Surface Areas and Volumes</a>
+                <a href="https://mynotesassamclass10.netlify.app/mathsch14" target="_blank">14. Statistics</a>
+                <a href="https://mynotesassamclass10.netlify.app/mathsch15" target="_blank">15. Probability</a>
             </div>
         </div>
+
+        <!-- Science Section -->
+        <div class="dropdown">
+            <button onclick="toggleDropdown('science-dropdown')" style="width: 100px;">Science</button>
+            <div id="science-dropdown" class="dropdown-content">
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">1. Chemical Reactions and Equations</a>
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">2. Acids, Bases and Salts</a>
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">3. Metals and Non-metals</a>
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">4. Carbon and its Compounds</a>
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">5. Periodic Classification of Elements</a>
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">6. Life Processes</a>
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">7. Control and Coordination</a>
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">8. How do Organisms Reproduce?</a>
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">9. Heredity and Evolution</a>
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">10. Light – Reflection and Refraction</a>
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">11. Human Eye and Colourful World</a>
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">12. Electricity</a>
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">13. Magnetic Effects of Electric Current</a>
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">14. Sources of Energy</a>
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">15. Our Environment</a>
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">16. Management of Natural Resources</a>
+            </div>
+        </div>
+
+        <!-- English Section -->
+        <div class="dropdown">
+            <button onclick="toggleDropdown('english-dropdown')" style="width: 100px;">English</button>
+            <div id="english-dropdown" class="dropdown-content">
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">1. Literature</a>
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">2. Grammar</a>
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">3. Composition</a>
+            </div>
+        </div>
+
+        <!-- Hindi Section -->
+        <div class="dropdown">
+            <button onclick="toggleDropdown('hindi-dropdown')" style="width: 100px;">Hindi</button>
+            <div id="hindi-dropdown" class="dropdown-content">
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">1. Literature</a>
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">2. Grammar</a>
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">3. Composition</a>
+            </div>
+        </div>
+
+        <!-- Assamese Section -->
+        <div class="dropdown">
+            <button onclick="toggleDropdown('assamese-dropdown')" style="width: 100px;">Assamese</button>
+            <div id="assamese-dropdown" class="dropdown-content">
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">1. Literature</a>
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">2. Grammar</a>
+                <a href="https://drive.google.com/file/d/<Google Drive Link>/view" target="_blank">3. Composition</a>
+            </div>
+        </div>
+
     </section>
     <section id="about" style="text-align: center;">
+        <div class="chip">
         <h2>About</h2>
         <p>We are a two-person team providing free study notes for students in classes 9 to 12. Our goal is to make learning easier by offering clear and organized materials to help you understand your subjects better. Whether you're preparing for exams or revising lessons, our notes are here to help. We believe education should be accessible to everyone, and we're happy to support your academic journey.</p>
+    </div>
     </section>
     <section id="contact" style="text-align: center;">
+        <div class="chip">
         <h2>Contact</h2>
         <p>Have questions? Get in touch with us via email or phone. We're here to help!</p>
         <p>jun3d90@gmail.com</p>
         <p>+91 84040 59436</p>
+    </div>
     </section>
     <footer>
         <div class="container">
             <p>&copy; 2025 Jick's Study Notes. All rights reserved.</p>
         </div>
     </footer>
-    <script>
-        function toggleDropdown(id) {
-            const dropdown = document.getElementById(id);
-
-            // Check if the dropdown is already open
-            if (dropdown.style.maxHeight && dropdown.style.maxHeight !== "0px") {
-                dropdown.style.maxHeight = "0px"; // Close the dropdown
-            } else {
-                dropdown.style.maxHeight = dropdown.scrollHeight + "px"; // Open the dropdown
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
