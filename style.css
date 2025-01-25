@@ -1,0 +1,528 @@
+/* Base Styles */
+body {
+    font-family: 'Quicksand', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333333; /* Dark gray text for better readability */
+    line-height: 1.6;
+    background: #fff3e0; /* Soft peachy background */
+}
+
+header {
+    width: 100%;
+    background: linear-gradient(90deg, #5C6E6C, #A6B7AA); /* Balsam Green to Aquatone gradient */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 40px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    background: #ffffff; /* Light background for nav */
+    padding: 15px 20px;
+    border-bottom: 2px solid #f3f3f3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #D39087; /* Dusty Coral for navigation */
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #D2A96A; /* Artemis on hover */
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background: #D2A96A; /* Artemis underline */
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Section */
+section {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+    background: #ffffff; /* White background for sections */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2.4rem;
+    color: #D39087; /* Dusty Coral color */
+    margin-bottom: 20px;
+}
+
+section p {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #7f8c8d; /* Soft gray for text */
+    line-height: 1.8;
+}
+
+/* Links */
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.links a {
+    font-size: 1.6rem;
+    color: #D39087;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 0;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: #D2A96A; /* Artemis on hover */
+}
+
+/* Chip */
+.chip {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.chip:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown */
+.dropdown {
+    text-align: left;
+    margin: 40px 0;
+}
+
+.dropdown button {
+    background: #D39087;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s;
+}
+
+.dropdown button:hover {
+    background: #D2A96A;
+}
+
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    background: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: max-height 0.4s ease-out;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #34495e;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background: #f3f3f3;
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.hamburger-menu i {
+    transition: transform 0.3s ease;
+}
+
+.hamburger-menu.active i {
+    transform: rotate(90deg);
+}
+.nav-links {
+    display: flex;
+    justify-content: right;
+    padding: 10px;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    padding: 5px;
+    transition: background 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: #f3f3f3;
+    color: #D39087; /* Dusty Coral on hover */
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+
+
+/* Footer */
+footer {
+    background: #D39087;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Button */
+.btn { 
+    display: inline-block; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    color: #fff; 
+    background-color: #ff5722; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    margin-top: 20px; 
+} 
+
+/* Downloader */
+.btn:hover { 
+    background-color: #e64a19; 
+} 
+
+/* Popups */
+.popup-overlay { 
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1000; 
+} 
+
+.popup-menu { 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background: #f3f4f6; 
+    padding: 100px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    text-align: center; 
+} 
+
+.popup-menu p { 
+    margin-bottom: 20px; 
+} 
+
+#file-list { 
+    margin-top: 20px; 
+    text-align: left; 
+    display: inline-block; 
+} 
+
+.modal-overlay { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 1000; 
+} 
+
+.modal { 
+    background: #fff; 
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    width: 350px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+    position: relative; 
+    z-index: 1001; 
+} 
+
+.modal h3 { 
+    margin-top: 0; 
+} 
+
+.modal ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 10px 0; 
+} 
+
+.modal ul li { 
+    margin: 10px 0; 
+    display: flex; 
+    align-items: center; 
+} 
+
+.modal ul li label { 
+    margin-left: 10px; 
+    font-size: 16px; 
+} 
+
+.modal input[type="checkbox"] { 
+    width: 20px; 
+    height: 20px; 
+} 
+
+.modal button { 
+    margin-top: 10px; 
+    padding: 10px 15px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    border: none; 
+    border-radius: 5px; 
+} 
+
+.modal #download-selected-btn { 
+    background-color: #4CAF50; 
+    color: white; 
+} 
+
+.modal #select-all-btn { 
+    background-color: #2196F3; 
+    color: white; 
+    margin-bottom: 10px; 
+} 
+
+.modal #close-window-btn { 
+    background-color: #f44336; 
+    color: white; 
+    margin-left: 10px; 
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    color: #FBF3F2;
+}
+
+body.dark-mode header {
+    background: linear-gradient(90deg, #fa1c1c, #0055af);
+}
+
+body.dark-mode nav {
+    background: #032539;
+}
+
+body.dark-mode section {
+    background: #1c1c1c;
+    color: #FBF3F2;
+}
+
+body.dark-mode footer {
+    background: #444444;
+}
+
+body.dark-mode a {
+    color: #FA991C;
+}
+
+body.dark-mode a:hover {
+    color: #FBF3F2;
+}
+
+body.dark-mode nav a {
+    color: #FBF3F2;
+}
+
+body.dark-mode nav a:hover {
+    color: #FBF3F2;
+}
+
+body.dark-mode section h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .chip {
+    background: #212121;
+    color: #FBF3F2;
+}
+
+body.dark-mode .dropdown button {
+    background: rgb(57, 57, 57);
+    color: #FBF3F2;
+    border: 1px solid rgb(57, 57, 57);
+}
+
+body.dark-mode .dropdown button:hover {
+    background: rgb(45, 45, 45);
+}
+
+body.dark-mode .dropdown-content {
+    background: #212121;
+    border: 1px solid #444;
+}
+
+body.dark-mode .dropdown-content a {
+    color: #FBF3F2;
+}
+
+body.dark-mode .dropdown-content a:hover {
+    background: #41484a;
+}
+
+body.dark-mode .links a {
+    color: #FA991C;
+}
+
+body.dark-mode .links a:hover {
+    color: #FBF3F2;
+}
+
+body.dark-mode .hamburger-menu i {
+    color: white;
+}
+
+body.dark-mode .nav-links {
+    background: #444444;
+}
+
+body.dark-mode .nav-links a {
+    color: #FBF3F2;
+}
+
+body.dark-mode .nav-links a:hover {
+    background: #333;
+    color: #FBF3F2;
+}
+
+body.dark-mode .chip:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .popup-overlay { 
+    background: rgba(0, 0, 0, 0.8); 
+} 
+
+body.dark-mode .popup-menu { 
+    background: #2c2c2c; 
+    color: #e0e0e0; 
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); 
+} 
+
+body.dark-mode .modal { 
+    background: #2c2c2c; 
+    border: 1px solid #444; 
+    color: #e0e0e0; 
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); 
+} 
+
+body.dark-mode .modal ul li label { 
+    color: #e0e0e0; 
+} 
+
+body.dark-mode .modal button { 
+    background: #444; 
+    color: white; 
+    border: 1px solid #666; 
+} 
+
+body.dark-mode .modal #download-selected-btn { 
+    background-color: #357a38; 
+} 
+
+body.dark-mode .modal #select-all-btn { 
+    background-color: #1565c0; 
+} 
+
+body.dark-mode .modal #close-window-btn { 
+    background-color: #c62828; 
+} 
+
+body.dark-mode .btn:hover { 
+    background-color: #ff5722; 
+} 

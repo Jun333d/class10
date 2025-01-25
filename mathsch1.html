@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center;">
+                    <img src="https://i.imgur.com/w49mLyC.png" style="height: 40px; margin-right: 10px;">
+                    <h2 style="margin: 0;">Jick's</h2>
+                </div>
+                <div class="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="pdf-viewer">
+        <iframe src="https://drive.google.com/file/d/1EyYjeZ2nyI8U9M8Qc0jmYxdObkVw89C1/preview" width="100%" height="500px" style="border: none;"></iframe>
+        <button class="btn" id="iframeDownloadButton">Download PDF</button>
+        <button class="btn" id="select-files-btn">Download all chapters</button>
+    <div id="file-list"></div>
+    </section>
+    <section id="about">
+        <div class="chip">
+        <h2>About</h2>
+        <p>We are a two-person team providing free study notes for students in classes 9 to 12. Our goal is to make learning easier by offering clear and organized materials to help you understand your subjects better. Whether you're preparing for exams or revising lessons, our notes are here to help. We believe education should be accessible to everyone, and we're happy to support your academic journey.</p>
+    </div>
+    </section>
+    <section id="contact">
+        <div class="chip">
+        <h2>Contact</h2>
+        <p>Have questions? Get in touch with us via email or phone. We're here to help!</p>
+        <p>jun3d90@gmail.com</p>
+        <p>+91 84040 59436</p>
+    </div>
+    </section>
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-menu">
+            <p>Are you sure you want to download this file?</p>
+            <a href="https://drive.google.com/uc?id=1EyYjeZ2nyI8U9M8Qc0jmYxdObkVw89C1&export=download" download class="btn">Download</a>
+            <br><br>
+            <button class="btn" id="closePopupButton">Close</button>
+    <div id="file-list"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <p>Toggle Theme</p>
+            <!-- Light mode image -->
+            <img src="https://i.imgur.com/T63hEhS.png" alt="Light Mode Icon" id="lightModeIcon" class="mode-icon" />
+            <!-- Dark mode image -->
+            <img src="https://i.imgur.com/ssNVywc.png" alt="Dark Mode Icon" id="darkModeIcon" class="mode-icon" />
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
